@@ -1,0 +1,299 @@
+/*
+  ========================================
+  General styles
+  ========================================
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #777777;
+    background: whitesmoke;
+    background-image: url("../images/qbkls.png");
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+    color: #E45F56;
+}
+
+a:hover {
+    background: #4aaaa5;
+    color: white;
+}
+
+/*
+  ========================================
+  Navigation styles
+  ========================================
+*/
+
+.nav-bar {
+    background: #fff;
+    border-bottom: 2px solid rgb(212, 212, 212);
+    width: 100%;
+}
+
+.nav-items {
+    width: 970px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: #4aaaa5;
+    padding: 0.5em;
+    margin-top: 0;
+    font-family: 'Sriracha', Georgia, serif;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.nav-list {
+    padding-top: 2em;
+    text-align: right;
+}
+
+.nav-list a {
+    padding: 1em;
+    border-radius: 3em;
+}
+
+/* 
+  ========================================
+  Main section styles
+  ========================================
+*/
+
+.main-section {
+    box-sizing: border-box;
+    width: 970px;
+    margin: 2em auto;
+    padding: 1em 2em 2em 2em;
+    background: #fff;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.main-section h1 {
+    color: #4aaaa5;
+    border-bottom: 3px solid rgb(212, 212, 212);
+    padding-bottom: 1em;
+}
+
+.main-section p {
+    line-height: 2;
+}
+
+.main-section-wrapper {
+    flex: 1 0 auto;
+}
+
+#main-img {
+    float: left;
+    display: block;
+    width: 25%;
+    margin-right: 1em;
+    border: 2px solid #4aaaa5;
+}
+
+/* 
+  ========================================
+  Portfolio styles
+  ========================================
+*/
+
+.portfolio-main {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.portfolio-item-container {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.portfolio-item-container img:hover {
+    box-shadow: 2px 2px 5px #666666;
+}
+
+.portfolio-item {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #4aaaa5;
+}
+
+.portfolio-item-text {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 1em;
+    padding: 0.1em;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    font-size: 65%;
+}
+
+/* 
+  ========================================
+  Contact styles
+  ========================================
+*/
+
+label {
+    margin-bottom: 0.5em;
+}
+
+input, textarea {
+    width: 100%;
+    height: 2.5em;
+    margin-top: 0.5em;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+textarea {
+    height: 15em;
+}
+
+button {  
+    padding: 0.5em;
+    background: #4aaaa5;
+    color: #fff;
+    font-size: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input::placeholder, textarea::placeholder {
+    padding-left: 0.3em;
+    color: rgb(141, 139, 139);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-style: italic; 
+    font-size: small;
+}
+
+.contact-form {
+    margin-bottom: 1em;
+}
+
+/* 
+  ========================================
+  Footer styles
+  ========================================
+*/
+
+.footer {
+    clear: both;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1em 0 0 0;
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.6em;
+}
+
+/* 
+  ========================================
+  Media queries for repsonsive behavior
+  ========================================
+*/
+
+/* Width at 980px and below */
+@media screen and (max-width: 980px) {
+    .logo {
+        margin-left: 1em;
+    }
+
+    .nav-items {
+        width: 100%;
+    }
+
+    .nav-list {
+        margin-right: 1em;
+    }
+    
+    .main-section {
+        width: 65%;
+        margin-left: 2em;
+    }
+
+    #main-img {
+        width: 35%;
+    }
+}
+
+/* Width at 768px and below */
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 1em;
+    }
+
+    .main-section {
+        width: 90%;
+    }
+
+    .nav-list {
+        margin-right: 2em;
+    }
+
+    #main-img {
+        width: 35%;
+    }
+}
+
+/* Width at 640px and below */
+@media screen and (max-width: 640px) {
+    .nav-items {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin: 0;
+    }
+
+    .nav-list {
+        margin: 0;
+        text-align: center;
+        padding: 2em;
+    }
+
+    .main-section {
+        margin-left: auto;
+    }
+
+    #main-img {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .portfolio-item-container, .portfolio-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-item-text {
+        box-sizing: content-box;
+    }
+    
+    
+}
